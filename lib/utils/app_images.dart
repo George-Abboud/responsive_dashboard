@@ -10,6 +10,10 @@ class AppImage {
   /// assets/images/avatar2.svg
   static const String imagesAvatar2 = "assets/images/avatar2.svg";
 
+  /// Assets for imagesAvatar3
+  /// assets/images/avatar3.svg
+  static const String imagesAvatar3 = "assets/images/avatar3.svg";
+
   /// Assets for imagesBalance
   /// assets/images/balance.svg
   static const String imagesBalance = "assets/images/balance.svg";
