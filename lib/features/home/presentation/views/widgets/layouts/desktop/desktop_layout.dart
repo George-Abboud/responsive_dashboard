@@ -7,18 +7,19 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Row(
-        children: [
-          Expanded(
-            child: CustomDrawer(),
-          ),
-          Expanded(
-            flex: 2,
-            child: ExpensesAndInvoices(),
-          ),
-        ],
-      ),
+    return const Row(
+      children: [
+        Expanded(
+          child: CustomDrawer(),
+        ),
+        SizedBox(
+          width: 32,
+        ),
+        Expanded(
+          flex: 2,
+          child: ExpensesAndInvoices(),
+        ),
+      ],
     );
   }
 }

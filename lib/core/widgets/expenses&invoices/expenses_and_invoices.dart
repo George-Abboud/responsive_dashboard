@@ -8,9 +8,7 @@ class ExpensesAndInvoices extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Expanded(
-          child: AllExpenses(),
-        ),
+        Expanded(child: AllExpenses()),
       ],
     );
   }
