@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/views/dashboard_view.dart';
+import 'package:responsive_dashboard/features/home/presentation/views/dashboard_view.dart';
 
 void main() {
   runApp(const ResponsiveDashboard());
