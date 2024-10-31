@@ -47,17 +47,21 @@ class _AllExpensesBodyState extends State<AllExpensesBody> {
           .entries
           .map(
             (e) => Expanded(
-              child: Padding(
-                padding: e.key == 1
-                    ? const EdgeInsets.symmetric(horizontal: 12)
-                    : EdgeInsets.zero,
-                child: ExpensesItem(
-                  expensesItemModel: e.value,
-                ),
+              child: ExpensesItem(
+                padding: formatPadding(e),
+                expensesItemModel: e.value,
               ),
             ),
           )
           .toList(),
     );
+  }
+
+  EdgeInsets formatPadding(MapEntry<int, ExpensesItemModel> e) {
+    return e.key == 0
+        ? const EdgeInsets.only(right: 6)
+        : e.key == expensesItems.length - 1
+            ? const EdgeInsets.only(left: 6)
+            : const EdgeInsets.symmetric(horizontal: 6);
   }
 }
