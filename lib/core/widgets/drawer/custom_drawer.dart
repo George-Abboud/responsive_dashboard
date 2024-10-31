@@ -15,42 +15,57 @@ class CustomDrawer extends StatelessWidget {
       child: const CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: UserInfoListTile(
-              image: AppImages.imagesAvatar3,
-              title: 'Lekan Okeowo',
-              subtitle: 'demo@gmail.com',
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: 8,
-            ),
-          ),
-          DrawerItemsListView(),
-          SliverFillRemaining(
-            hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(
-                  child: SizedBox(
-                    height: 20,
-                  ),
-                ),
-                InActiveDrawerItem(
-                  drawerItem: DrawerItemModel(
-                      image: AppImages.imagesSettings, title: 'Setting system'),
+                SizedBox(
+                  height: 24,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 20),
-                  child: InActiveDrawerItem(
-                    drawerItem: DrawerItemModel(
-                        image: AppImages.imagesLogout, title: 'Logout account'),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: UserInfoListTile(
+                    image: AppImages.imagesAvatar3,
+                    title: 'Lekan Okeowo',
+                    subtitle: 'demo@gmail.com',
                   ),
                 ),
                 SizedBox(
-                  height: 48,
+                  height: 8,
                 ),
               ],
+            ),
+          ),
+          SliverPadding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              sliver: DrawerItemsListView()),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            sliver: SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  Expanded(
+                    child: SizedBox(
+                      height: 20,
+                    ),
+                  ),
+                  InActiveDrawerItem(
+                    drawerItem: DrawerItemModel(
+                        image: AppImages.imagesSettings,
+                        title: 'Setting system'),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 20),
+                    child: InActiveDrawerItem(
+                      drawerItem: DrawerItemModel(
+                          image: AppImages.imagesLogout,
+                          title: 'Logout account'),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 48,
+                  ),
+                ],
+              ),
             ),
           ),
         ],
