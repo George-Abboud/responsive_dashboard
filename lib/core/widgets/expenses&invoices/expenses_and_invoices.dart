@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/core/widgets/expenses&invoices/all_expenses.dart';
+import 'package:responsive_dashboard/core/widgets/expenses&invoices/all_expenses/all_expenses.dart';
 
 class ExpensesAndInvoices extends StatelessWidget {
   const ExpensesAndInvoices({super.key});

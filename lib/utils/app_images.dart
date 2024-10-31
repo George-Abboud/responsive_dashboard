@@ -1,13 +1,13 @@
 // ignore_for_file: prefer_single_quotes
-class AppImages {
-  AppImages._();
-
+class AppImage {
+  AppImage._();
+  
   /// Assets for imagesArrowDown
-  /// assets/images/avatar1.svg
+  /// assets/images/arrow_down.svg
   static const String imagesArrowDown = "assets/images/arrow_down.svg";
 
   /// Assets for imagesArrowRight
-  /// assets/images/avatar1.svg
+  /// assets/images/arrow_right.svg
   static const String imagesArrowRight = "assets/images/arrow_right.svg";
 
   /// Assets for imagesAvatar1
@@ -66,3 +66,4 @@ class AppImages {
   /// assets/images/wallet.svg
   static const String imagesWallet = "assets/images/wallet.svg";
 }
+
