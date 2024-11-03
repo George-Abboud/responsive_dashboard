@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/core/utils/app_images.dart';
 import 'package:responsive_dashboard/core/widgets/drawer/active_and_inactive_drawer_items.dart';
 import 'package:responsive_dashboard/core/widgets/drawer/drawer_items_list_view.dart';
-import 'package:responsive_dashboard/core/widgets/user_info_list_tile.dart';
+import 'package:responsive_dashboard/core/widgets/common/user_info_list_tile.dart';
 import 'package:responsive_dashboard/features/home/data/models/drawer_item_model.dart';
 
 class CustomDrawer extends StatelessWidget {
