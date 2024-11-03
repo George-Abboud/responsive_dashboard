@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class CustomBackgroundWidget extends StatelessWidget {
   const CustomBackgroundWidget({
     super.key,
-    required this.child,
     required this.padding,
+    required this.child,
   });
   final Widget child;
   final EdgeInsetsGeometry padding;
