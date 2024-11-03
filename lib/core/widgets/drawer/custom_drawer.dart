@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/core/utils/app_data.dart';
 import 'package:responsive_dashboard/core/utils/app_images.dart';
 import 'package:responsive_dashboard/core/widgets/drawer/active_and_inactive_drawer_items.dart';
 import 'package:responsive_dashboard/core/widgets/drawer/drawer_items_list_view.dart';
 import 'package:responsive_dashboard/core/widgets/common/user_info_list_tile.dart';
-import 'package:responsive_dashboard/features/home/data/models/drawer_item_model.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -12,9 +12,9 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: const CustomScrollView(
+      child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: Column(
               children: [
                 SizedBox(
@@ -34,34 +34,30 @@ class CustomDrawer extends StatelessWidget {
               ],
             ),
           ),
-          SliverPadding(
+          const SliverPadding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               sliver: DrawerItemsListView()),
           SliverPadding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             sliver: SliverFillRemaining(
               hasScrollBody: false,
               child: Column(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: SizedBox(
                       height: 20,
                     ),
                   ),
                   InActiveDrawerItem(
-                    drawerItem: DrawerItemModel(
-                        image: AppImages.imagesSettings,
-                        title: 'Setting system'),
+                    drawerItem: AppData.drawerItems[5],
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 20),
+                    padding: const EdgeInsets.only(top: 20),
                     child: InActiveDrawerItem(
-                      drawerItem: DrawerItemModel(
-                          image: AppImages.imagesLogout,
-                          title: 'Logout account'),
+                      drawerItem: AppData.drawerItems.last,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 48,
                   ),
                 ],

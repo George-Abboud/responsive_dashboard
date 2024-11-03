@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/core/utils/app_images.dart';
+import 'package:responsive_dashboard/core/utils/app_data.dart';
 import 'package:responsive_dashboard/core/widgets/drawer/custom_drawer_item.dart';
-import 'package:responsive_dashboard/features/home/data/models/drawer_item_model.dart';
 
 class DrawerItemsListView extends StatefulWidget {
   const DrawerItemsListView({
@@ -13,29 +12,6 @@ class DrawerItemsListView extends StatefulWidget {
 }
 
 class _DrawerItemsListViewState extends State<DrawerItemsListView> {
-  final List<DrawerItemModel> drawerItems = const [
-    DrawerItemModel(
-      image: AppImages.imagesDashboard,
-      title: 'Dashboard',
-    ),
-    DrawerItemModel(
-      image: AppImages.imagesMyTransaction,
-      title: 'My Transaction',
-    ),
-    DrawerItemModel(
-      image: AppImages.imagesStatistics,
-      title: 'Statistics',
-    ),
-    DrawerItemModel(
-      image: AppImages.imagesWallet,
-      title: 'Wallet Account',
-    ),
-    DrawerItemModel(
-      image: AppImages.imagesInvestments,
-      title: 'My Investments',
-    ),
-  ];
-
   late int currentIndex;
 
   @override
@@ -47,7 +23,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
   @override
   Widget build(BuildContext context) {
     return SliverList.builder(
-      itemCount: drawerItems.length,
+      itemCount: AppData.drawerItems.length - 2,
       itemBuilder: (context, index) => GestureDetector(
         onTap: () {
           if (currentIndex != index) {
@@ -59,7 +35,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
         child: Padding(
           padding: const EdgeInsets.only(top: 20),
           child: CustomDrawerItem(
-            drawerItem: drawerItems[index],
+            drawerItem: AppData.drawerItems[index],
             isActive: currentIndex == index,
           ),
         ),
