@@ -47,9 +47,16 @@ class _AllExpensesBodyState extends State<AllExpensesBody> {
           .entries
           .map(
             (e) => Expanded(
-              child: ExpensesItem(
-                padding: formatPadding(e),
-                expensesItemModel: e.value,
+              child: GestureDetector(
+                onTap: () {
+                  currentIndex = e.key;
+                  setState(() {});
+                },
+                child: ExpensesItem(
+                  isActive: currentIndex == e.key ? true : false,
+                  padding: formatPadding(e),
+                  expensesItemModel: e.value,
+                ),
               ),
             ),
           )

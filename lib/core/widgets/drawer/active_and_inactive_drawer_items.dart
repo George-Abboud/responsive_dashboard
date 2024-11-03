@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:responsive_dashboard/constants.dart';
 import 'package:responsive_dashboard/core/utils/app_styles.dart';
 import 'package:responsive_dashboard/features/home/data/models/drawer_item_model.dart';
 
@@ -45,7 +46,7 @@ class ActiveDrawerItem extends StatelessWidget {
       ),
       trailing: Container(
         width: 3.27,
-        decoration: const BoxDecoration(color: Color(0xFF4EB7F2)),
+        decoration: const BoxDecoration(color: kPrimaryColor),
       ),
     );
   }

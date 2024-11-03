@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/constants.dart';
 
 abstract class AppStyles {
   //Regular:
   static const styleRegular12 = TextStyle(
-    color: Color(0xFFAAAAAA),
+    color: kSubtitlesColor,
     fontSize: 12,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
@@ -11,7 +12,7 @@ abstract class AppStyles {
   );
 
   static const styleRegular14 = TextStyle(
-    color: Color(0xFFAAAAAA),
+    color: kSubtitlesColor,
     fontSize: 14,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
@@ -19,7 +20,7 @@ abstract class AppStyles {
   );
 
   static const styleRegular16 = TextStyle(
-    color: Color(0xFF064060),
+    color: kTitlesColor,
     fontSize: 16,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
@@ -30,7 +31,7 @@ abstract class AppStyles {
 
 //Medium:
   static const styleMedium16 = TextStyle(
-    color: Color(0xFF064060),
+    color: kTitlesColor,
     fontSize: 16,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w500,
@@ -38,7 +39,7 @@ abstract class AppStyles {
   );
 
   static const styleMedium20 = TextStyle(
-    color: Color(0xFFFFFFFF),
+    color: Colors.white,
     fontSize: 20,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w500,
@@ -49,7 +50,7 @@ abstract class AppStyles {
 
 //SemiBold:
   static const styleSemiBold16 = TextStyle(
-    color: Color(0xFF064060),
+    color: kTitlesColor,
     fontSize: 16,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
@@ -57,7 +58,7 @@ abstract class AppStyles {
   );
 
   static const styleSemiBold18 = TextStyle(
-    color: Color(0xFFFFFFFF),
+    color: Colors.white,
     fontSize: 18,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
@@ -65,7 +66,7 @@ abstract class AppStyles {
   );
 
   static const styleSemiBold20 = TextStyle(
-    color: Color(0xFF064060),
+    color: kTitlesColor,
     fontSize: 20,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
@@ -73,7 +74,7 @@ abstract class AppStyles {
   );
 
   static const styleSemiBold24 = TextStyle(
-    color: Color(0xFF4EB7F2),
+    color: kPrimaryColor,
     fontSize: 24,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
@@ -84,7 +85,7 @@ abstract class AppStyles {
 
 //Bold:
   static const styleBold16 = TextStyle(
-    color: Color(0xFF4EB7F2),
+    color: kPrimaryColor,
     fontSize: 16,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w700,
