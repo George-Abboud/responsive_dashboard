@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/constants.dart';
 import 'package:responsive_dashboard/core/utils/app_styles.dart';
+import 'package:responsive_dashboard/core/widgets/expenses&invoices/invoices/header/add_quick_invoice_icon.dart';
 
 class QuickInvoiceHeader extends StatelessWidget {
   const QuickInvoiceHeader({super.key});
@@ -14,30 +14,8 @@ class QuickInvoiceHeader extends StatelessWidget {
           style: AppStyles.styleSemiBold20,
         ),
         Spacer(),
-        CustomAddIcon(),
+        AddQuickInvoiceIcon(),
       ],
-    );
-  }
-}
-
-class CustomAddIcon extends StatelessWidget {
-  const CustomAddIcon({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: const ShapeDecoration(
-        color: kBackGroundItemColor,
-        shape: OvalBorder(),
-      ),
-      child: const Padding(
-        padding: EdgeInsets.all(15),
-        child: Icon(
-          Icons.add,
-          color: kPrimaryColor,
-          size: 18,
-        ),
-      ),
     );
   }
 }
