@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/core/utils/app_styles.dart';
-import 'package:responsive_dashboard/core/widgets/expenses&invoices/invoices/body/latest_transaction.dart';
-import 'package:responsive_dashboard/core/widgets/expenses&invoices/invoices/body/title_text_field.dart';
+import 'package:responsive_dashboard/core/widgets/expenses&invoices/invoices/body/latest_transaction/latest_transaction.dart';
+import 'package:responsive_dashboard/core/widgets/expenses&invoices/invoices/body/quick_invoice_form/quick_invoice_form.dart';
 
 class QuickInvoicesBody extends StatelessWidget {
   const QuickInvoicesBody({super.key});
@@ -23,10 +23,7 @@ class QuickInvoicesBody extends StatelessWidget {
           color: Color(0xFFF1F1F1),
           height: 48,
         ),
-        TitleTextField(
-          title: 'Customer name',
-          hint: 'Type customer name',
-        ),
+        QuickInvoiceForm(),
       ],
     );
   }
