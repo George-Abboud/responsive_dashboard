@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/core/widgets/expenses&invoices/all_expenses/body/active_&_inactive_all_expenses_item.dart';
+import 'package:responsive_dashboard/core/widgets/expenses&invoices/all_expenses/body/active_and_inactive_all_expenses_item.dart';
 import 'package:responsive_dashboard/features/home/data/models/expenses_item_model.dart';
 
 class ExpensesItem extends StatelessWidget {
