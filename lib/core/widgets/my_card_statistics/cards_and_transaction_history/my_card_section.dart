@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/core/widgets/common/custom_background_widget.dart';
-import 'package:responsive_dashboard/core/widgets/my_card_statistics/my_card/my_card.dart';
+import 'package:responsive_dashboard/core/widgets/my_card_statistics/cards_and_transaction_history/card/cards_section.dart';
 
-class MyCardSection extends StatelessWidget {
-  const MyCardSection({super.key});
+class CardsAndTransactionHistory extends StatelessWidget {
+  const CardsAndTransactionHistory({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class MyCardSection extends StatelessWidget {
       padding: EdgeInsets.all(24),
       child: Column(
         children: [
-          MyCard(),
+          CardsSection(),
         ],
       ),
     );
