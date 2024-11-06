@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dashboard/core/utils/app_images.dart';
 import 'package:responsive_dashboard/core/utils/app_styles.dart';
 
-class FilterAllExpenses extends StatelessWidget {
-  const FilterAllExpenses({super.key});
+class FilterButton extends StatelessWidget {
+  const FilterButton({super.key});
 
   @override
   Widget build(BuildContext context) {
