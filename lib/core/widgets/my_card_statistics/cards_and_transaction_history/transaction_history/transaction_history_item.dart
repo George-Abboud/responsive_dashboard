@@ -12,27 +12,31 @@ class TransactionHistoryItem extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
-      color: kBackGroundItemColor,
-      child: ListTile(
-        title: Text(
-          transactionHistoryModel.title,
-          style: AppStyles.styleSemiBold16,
+    return Padding(
+      padding: padding,
+      child: Card(
+        margin: EdgeInsets.zero,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
         ),
-        subtitle: Text(
-          transactionHistoryModel.date,
-          style: AppStyles.styleRegular16.copyWith(color: kSubtitlesColor),
-        ),
-        trailing: Text(
-          transactionHistoryModel.mount,
-          style: AppStyles.styleSemiBold20.copyWith(
-            color: transactionHistoryModel.isWithdrawal
-                ? const Color(0xFFF3735E)
-                : const Color(0xFF7CD87A),
+        color: kBackGroundItemColor,
+        child: ListTile(
+          title: Text(
+            transactionHistoryModel.title,
+            style: AppStyles.styleSemiBold16,
+          ),
+          subtitle: Text(
+            transactionHistoryModel.date,
+            style: AppStyles.styleRegular16.copyWith(color: kSubtitlesColor),
+          ),
+          trailing: Text(
+            transactionHistoryModel.mount,
+            style: AppStyles.styleSemiBold20.copyWith(
+              color: transactionHistoryModel.isWithdrawal
+                  ? const Color(0xFFF3735E)
+                  : const Color(0xFF7CD87A),
+            ),
           ),
         ),
       ),

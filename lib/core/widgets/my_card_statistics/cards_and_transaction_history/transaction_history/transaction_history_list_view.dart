@@ -14,11 +14,17 @@ class TransactionHistoryListView extends StatelessWidget {
       shrinkWrap: true,
       itemCount: items.length,
       itemBuilder: (context, index) => TransactionHistoryItem(
-        padding: index != 0 || index != items.length
-            ? const EdgeInsets.symmetric(horizontal: 12)
-            : EdgeInsets.zero,
+        padding: formatPadding(index, items),
         transactionHistoryModel: items[index],
       ),
     );
+  }
+
+  EdgeInsets formatPadding(int index, List<TransactionHistoryModel> items) {
+    return index == 0
+        ? const EdgeInsets.only(bottom: 6)
+        : index == items.length - 1
+            ? const EdgeInsets.only(top: 6)
+            : const EdgeInsets.symmetric(vertical: 6);
   }
 }
