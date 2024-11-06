@@ -1,6 +1,7 @@
 import 'package:responsive_dashboard/core/utils/app_images.dart';
 import 'package:responsive_dashboard/features/home/data/models/drawer_item_model.dart';
 import 'package:responsive_dashboard/features/home/data/models/expenses_item_model.dart';
+import 'package:responsive_dashboard/features/home/data/models/transaction_history_model.dart';
 import 'package:responsive_dashboard/features/home/data/models/user_info_model.dart';
 
 abstract class AppData {
@@ -69,5 +70,26 @@ abstract class AppData {
         image: AppImages.imagesAvatar1,
         name: 'Madrani Andi',
         email: 'Madraniadi20@gmail.com'),
+  ];
+
+  static const List<TransactionHistoryModel> transactionHistoryItems = [
+    TransactionHistoryModel(
+      title: 'Cash Withdrawal',
+      date: '13 Apr, 2022 ',
+      mount: r'$20,129',
+      isWithdrawal: true,
+    ),
+    TransactionHistoryModel(
+      title: 'Landing Page project',
+      date: '13 Apr, 2022 at 3:30 PM',
+      mount: r'$2,000',
+      isWithdrawal: false,
+    ),
+    TransactionHistoryModel(
+      title: 'Juni Mobile App project',
+      date: '13 Apr, 2022 at 3:30 PM',
+      mount: r'$20,129',
+      isWithdrawal: false,
+    ),
   ];
 }
