@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/core/widgets/drawer/custom_drawer.dart';
-import 'package:responsive_dashboard/core/widgets/expenses&invoices/expenses_and_invoices.dart';
-import 'package:responsive_dashboard/core/widgets/my_card_statistics/my_card_statistics.dart';
+import 'package:responsive_dashboard/features/home/presentation/views/widgets/layouts/mobile/mobile_layout.dart';
 
 class TabletLayout extends StatelessWidget {
   const TabletLayout({super.key});
@@ -18,17 +17,9 @@ class TabletLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                ExpensesAndInvoices(
-                  padding: EdgeInsets.only(bottom: 24, top: 40),
-                ),
-                MyCardStatistics(
-                  padding: EdgeInsets.only(bottom: 32),
-                ),
-              ],
-            ),
+          child: MobileLayout(
+            padding: EdgeInsets.zero,
+            expensesPadding: EdgeInsets.only(top: 40, bottom: 24),
           ),
         ),
         SizedBox(
