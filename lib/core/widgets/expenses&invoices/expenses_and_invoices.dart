@@ -3,17 +3,14 @@ import 'package:responsive_dashboard/core/widgets/expenses&invoices/all_expenses
 import 'package:responsive_dashboard/core/widgets/expenses&invoices/invoices/quick_invoices.dart';
 
 class ExpensesAndInvoices extends StatelessWidget {
-  const ExpensesAndInvoices({super.key});
-
+  const ExpensesAndInvoices({super.key, required this.padding});
+  final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.only(
-          top: 40,
-          bottom: 32,
-        ),
-        child: Column(
+        padding: padding,
+        child: const Column(
           children: [
             AllExpenses(),
             SizedBox(

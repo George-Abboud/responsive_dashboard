@@ -3,14 +3,14 @@ import 'package:responsive_dashboard/core/widgets/my_card_statistics/cards_and_t
 import 'package:responsive_dashboard/core/widgets/my_card_statistics/chart/chart_income.dart';
 
 class MyCardStatistics extends StatelessWidget {
-  const MyCardStatistics({super.key});
-
+  const MyCardStatistics({super.key, required this.padding});
+  final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.only(right: 24, top: 40, bottom: 32),
-        child: Column(
+        padding: padding,
+        child: const Column(
           children: [
             CardsAndTransactionHistory(),
             SizedBox(

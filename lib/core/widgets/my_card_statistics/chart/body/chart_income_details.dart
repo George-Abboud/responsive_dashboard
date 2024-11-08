@@ -8,7 +8,6 @@ class ChartIncomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Expanded(child: CustomChart()),
         SizedBox(
