@@ -1,7 +1,9 @@
-import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/constants.dart';
 import 'package:responsive_dashboard/core/utils/app_images.dart';
 import 'package:responsive_dashboard/features/home/data/models/drawer_item_model.dart';
 import 'package:responsive_dashboard/features/home/data/models/expenses_item_model.dart';
+import 'package:responsive_dashboard/features/home/data/models/income_details_item_model.dart';
 import 'package:responsive_dashboard/features/home/data/models/transaction_history_model.dart';
 import 'package:responsive_dashboard/features/home/data/models/user_info_model.dart';
 
@@ -91,6 +93,29 @@ abstract class AppData {
       date: '13 Apr, 2022 at 3:30 PM',
       mount: r'$20,129',
       isWithdrawal: false,
+    ),
+  ];
+
+  static const List<IncomeDetailsItemModel> incomeDetailsItems = [
+    IncomeDetailsItemModel(
+      title: 'Design service',
+      value: 40,
+      color: Color(0xFF208BC7),
+    ),
+    IncomeDetailsItemModel(
+      title: 'Design product',
+      value: 25,
+      color: kPrimaryColor,
+    ),
+    IncomeDetailsItemModel(
+      title: 'Product royalti',
+      value: 20,
+      color: kTitlesColor,
+    ),
+    IncomeDetailsItemModel(
+      title: 'Other',
+      value: 22,
+      color: Color(0xFFE2DECD),
     ),
   ];
 }
