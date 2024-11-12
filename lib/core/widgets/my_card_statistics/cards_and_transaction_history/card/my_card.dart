@@ -38,7 +38,9 @@ class MyCard extends StatelessWidget {
               contentPadding: const EdgeInsets.only(left: 31, right: 45),
               minVerticalPadding: 20,
             ),
-            const Spacer(),
+            const Spacer(
+              flex: 5,
+            ),
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: Column(
@@ -60,8 +62,10 @@ class MyCard extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 27,
+            const Flexible(
+              child: SizedBox(
+                height: 27,
+              ),
             )
           ],
         ),

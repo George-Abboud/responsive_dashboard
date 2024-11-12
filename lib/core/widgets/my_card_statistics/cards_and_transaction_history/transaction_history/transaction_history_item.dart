@@ -22,9 +22,12 @@ class TransactionHistoryItem extends StatelessWidget {
         ),
         color: kBackGroundItemColor,
         child: ListTile(
-          title: Text(
-            transactionHistoryModel.title,
-            style: AppStyles.styleSemiBold16(context),
+          title: Padding(
+            padding: const EdgeInsets.only(bottom: 4),
+            child: Text(
+              transactionHistoryModel.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
           subtitle: Text(
             transactionHistoryModel.date,
