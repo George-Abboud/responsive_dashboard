@@ -17,7 +17,8 @@ class ChartIncomeBody extends StatelessWidget {
         ),
         Text('See detail',
             textAlign: TextAlign.center,
-            style: AppStyles.styleSemiBold16.copyWith(color: kPrimaryColor)),
+            style: AppStyles.styleSemiBold16(context)
+                .copyWith(color: kPrimaryColor)),
       ],
     );
   }

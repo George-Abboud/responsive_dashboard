@@ -9,11 +9,11 @@ class ChartIncomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(child: CustomChart()),
+        Expanded(flex: 2, child: CustomChart()),
         SizedBox(
           width: 40,
         ),
-        Expanded(flex: 2, child: DetailsListView()),
+        Expanded(flex: 4, child: DetailsListView()),
       ],
     );
   }

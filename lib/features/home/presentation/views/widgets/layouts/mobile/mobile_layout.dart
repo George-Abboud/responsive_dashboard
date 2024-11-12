@@ -20,7 +20,7 @@ class MobileLayout extends StatelessWidget {
               padding: expensesPadding,
             ),
             const MyCardStatistics(
-              padding: EdgeInsets.only(bottom: 24),
+              padding: EdgeInsets.only(bottom: 32),
             ),
           ],
         ),

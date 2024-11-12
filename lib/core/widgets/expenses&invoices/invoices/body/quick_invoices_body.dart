@@ -8,22 +8,22 @@ class QuickInvoicesBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           'Latest Transaction',
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
-        LatestTransaction(),
-        Divider(
+        const LatestTransaction(),
+        const Divider(
           color: Color(0xFFF1F1F1),
           height: 48,
         ),
-        QuickInvoiceForm(),
+        const QuickInvoiceForm(),
       ],
     );
   }
