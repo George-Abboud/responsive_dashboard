@@ -10,6 +10,7 @@ class TransactionHistoryListView extends StatelessWidget {
   Widget build(BuildContext context) {
     List<TransactionHistoryModel> items = AppData.transactionHistoryItems;
     return ListView.builder(
+      physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.zero,
       shrinkWrap: true,
       itemCount: items.length,
