@@ -5,25 +5,21 @@ import 'package:responsive_dashboard/core/widgets/my_card_statistics/my_card_sta
 class MobileLayout extends StatelessWidget {
   const MobileLayout({
     super.key,
-    required this.padding,
     required this.expensesPadding,
   });
-  final EdgeInsetsGeometry padding, expensesPadding;
+  final EdgeInsetsGeometry expensesPadding;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: padding,
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            ExpensesAndInvoices(
-              padding: expensesPadding,
-            ),
-            const MyCardStatistics(
-              padding: EdgeInsets.only(bottom: 32),
-            ),
-          ],
-        ),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          ExpensesAndInvoices(
+            padding: expensesPadding,
+          ),
+          const MyCardStatistics(
+            padding: EdgeInsets.only(bottom: 32),
+          ),
+        ],
       ),
     );
   }

@@ -39,7 +39,7 @@ class MyCard extends StatelessWidget {
               minVerticalPadding: 20,
             ),
             const Spacer(
-              flex: 5,
+              flex: 4,
             ),
             Padding(
               padding: const EdgeInsets.only(right: 24),

@@ -133,7 +133,7 @@ double getScaleFactor(BuildContext context) {
   double width = MediaQuery.sizeOf(context).width;
 
   if (width < 800) {
-    return width / 800;
+    return width / 1000;
   } else if (width < 1200) {
     return width / 1200;
   } else {
